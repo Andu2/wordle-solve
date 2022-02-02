@@ -1,9 +1,10 @@
 {
   "type": "module",
   "scripts": {
-    "create-bookmarklet": "bookmarklet wordle.js wordle-bookmarklet.uri"
+    "build": "esbuild wordle.js --bundle --minify --outfile=wordle.bundle.js && bookmarklet wordle.bundle.js wordle-bookmarklet.uri"
   },
   "dependencies": {
-    "bookmarklet": "^3.0.0"
+    "bookmarklet": "^3.0.0",
+    "esbuild": "^0.14.16"
   }
 }
